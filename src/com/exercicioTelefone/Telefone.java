@@ -6,10 +6,10 @@ public class Telefone {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         System.out.println("Escreva uma frase: ");
-        String frase = scanner.next();
+        String frase = scanner.nextLine();
         String resultado = "";
 
-        char[] chars = frase.toCharArray();
+        char[] chars = frase.toUpperCase().toCharArray();
         for (char el: chars) {
             switch (el){
                 case 'A':
