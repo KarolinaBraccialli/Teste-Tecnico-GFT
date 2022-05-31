@@ -33,13 +33,15 @@ public class Agenda {
             this.agenda.add(contato);
         }
 
-//        void editarPessoa(int codigo, int idade, int telefone) {
-//            int indice = buscarPessoa(codigo);
-//            if (indice != -1) {
-//                this.agenda.get(indice);
-//             TODO acessar agenda e editar pelo índice
-//            }
-//        }
+        void editarPessoa(int codigo, int idade, int telefone) {
+            int indice = buscarPessoa(codigo);
+            if (codigo != -1){
+                Pessoa editar = this.agenda.get(indice);
+                editar.setIdade(idade);
+                editar.setTelefone(telefone);
+                this.agenda.set(indice, editar);
+            }
+        }
 
     int buscarPessoa(int codigo) {
         for (Pessoa contato : this.agenda) {
